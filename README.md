@@ -107,7 +107,8 @@ require("lazybacklog").setup({
 2. It opens a terminal window running `backlog --path <root> --editor "nvim --remote-send"`.
 3. The backlog binary detects `$NVIM` and knows it is running inside Neovim.
 4. When you press `o` on a task in backlog's detail view, it opens the task file (`tasks/<ID>.md`) in Neovim.
-5. Press `q` or `:q` inside backlog to close; the terminal window closes automatically.
+5. Press `q` inside backlog to quit; the terminal window closes automatically when backlog exits.
+6. To exit terminal mode (e.g. to use Neovim windows), press `<C-\><C-n>` — standard Neovim terminal method.
 
 ## Development
 

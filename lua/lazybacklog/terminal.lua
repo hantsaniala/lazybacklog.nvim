@@ -86,8 +86,6 @@ local function create_floating(backlog_root)
   })
 
   vim.api.nvim_win_set_option(win, "winhl", "Normal:NormalFloat,FloatBorder:FloatBorder")
-  vim.api.nvim_buf_set_keymap(buf, "t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
-  vim.api.nvim_buf_set_keymap(buf, "t", "q", [[<C-\><C-n>:q<CR>]], { nowait = true, noremap = true, silent = true })
 
   return buf, win
 end
@@ -110,9 +108,6 @@ local function create_split(backlog_root, dir)
       height = opts.split_size,
     })
   end
-
-  vim.api.nvim_buf_set_keymap(buf, "t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
-  vim.api.nvim_buf_set_keymap(buf, "t", "q", [[<C-\><C-n>:close<CR>]], { nowait = true, noremap = true, silent = true })
 
   return buf, win
 end
