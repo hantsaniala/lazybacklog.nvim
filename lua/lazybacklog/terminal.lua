@@ -145,8 +145,7 @@ function M.open()
   M.bufnr = buf
   M.winid = win
 
-  local cmd_str = vim.fn.join(args, " ")
-  vim.fn.termopen(cmd_str, {
+  vim.fn.termopen(args, {
     on_exit = function()
       vim.schedule(function()
         if M.winid and vim.api.nvim_win_is_valid(M.winid) then
